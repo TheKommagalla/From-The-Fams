@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>From the Fam</title>
+<link rel="stylesheet" href="css/styles.css">
+ 
+</head>
+   
+<body onload="openModal()">
+    <header class="header">
+     
+      <a href="interface.html" class="logo">
+        <i class="fas fa-shopping-cart"></i><img src="images/logo2.png" alt="Logo">
+    </a>
+    <!-- Location Image Trigger -->
+    <div class="location-trigger" onclick="openModal()" style="margin-left: 60px;">
+        <img src="images/location-pin.png" alt="Enter your location">
+    </div>
+    <!-- Search Bar -->
+    <div class="search-bar" style="margin-left: -30px;">
+        <input type="text" id="search-input" placeholder="Search for vegetables and more">
+        <button type="submit">
+            <img src="images/searchbarlogo.png" alt="Search Logo" height="20px"><i class="fas fa-search"></i></button>
+    </div>
+    <!-- Filter Button with Dropdown -->
+    <div class="filter-container">
+        <button class="filter-button">Filter <i class="fas fa-filter"></i></button>
+        <div class="filter-dropdown">
+            <label for="min-distance">Min Distance (km):</label>
+            <input type="number" id="min-distance" placeholder="0" min="1" max="100"><br>
+            <label for="max-distance">Max Distance (km):</label>
+            <input type="number" id="max-distance" placeholder="0" min="1" max="100">
+        </div>
+    </div>
+    <!-- Navigation Links -->
+    <div class="nav-links" style="margin-right: 50px;">
+        
+        <a href="cart.html" class="cart">
+            <img src="images/cart-icon-28356.png" height="20px" title="cart" style="margin: right 10px ;">
+            
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+        <a href="become_a_seller.html" style="margin-right: 5px;">Become a Seller</a>
+        <a href="loginpage.html"> 
+            <img src="images/loginlogo.png" height="20px" style="cursor: pointer;" title="Login">Login</a>
+    </div>
+
+
+<!-- Modal for Location Input -->
+<div id="locationModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h6 style="color: gray;">WELCOME TO FROM THE FARMS</h6>
+            <span>Change Location</span>
+            <span class="close" onclick="closeModal()">&times;</span>
+        </div>
+        <div class="modal-button-group">
+          <button id="detect-location-btn">Current location</button>           
+           <span>OR</span>
+            <input type="text" placeholder="Search delivery location">
+        </div>
+    </div>
+</div>
+    </header>
+<!-----------------------------------------------------------------main container-------------------------------------------------------------------------->
+    <main class="main-components">
+        <div class="main1">
+        
+            <img src="images/head-image.png" alt="" class="image">
+        </div>
+        <div class="title">
+            <h5><i>Choose your category</i></h5>
+        </div>
+        <div class="main-catogry">
+        
+            <div class="scroll-container">
+                <div class="product-category">
+                    <img src="images/image1.png"  class="img-category"  alt="Product 1">
+                    
+                </div>
+                <div class="product-category">
+                    <img src="images/image2.png" class="img-category" alt="Product 2">
+                   
+                </div>
+                <div class="product-category">
+                    <img src="images/image3.png"  class="img-category"  alt="Product 3">
+                   
+                </div>
+                <div class="product-category">
+                    <img src="images/image4.png"   class="img-category" alt="Product 3">
+                   
+                </div>
+               
+  </div>
+        <!-------------------------====---------------------------------------MAIN2 --------------------------------------------------------------------------->
+        <div class="title">
+            <h5><i>Vegetable</i></h5>
+        </div>
+        <div class="main2">
+        
+            <div class="scroll-container">
+                <div class="product">
+                    <img src="images/potato.png" alt="Product 1">
+                    <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                <div class="product">
+                    <img src="images/tomato.png" alt="Product 2">
+                    <span >Amul Masti Curd 500g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                     
+                </div>
+                <div class="product">
+                    <img src="images/cucumber .png" alt="Product 3">
+                    <span >Amul Masti Curd  1kg</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                <div class="product">
+                    <img src="images/brinjal.png" alt="Product 3">
+                    <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                <div class="product">
+                    <img src="images/bottlegarud .png" alt="Product 3">
+                    <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                <div class="product">
+                    <img src="images/pea.png" alt="Product 3">
+                    <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                 <div class="product">
+                    <img src="images/onion .png" alt="Product 3">
+                    <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                 <div class="product">
+                    <img src="images/greenchiil.webp" alt="Product 3">
+                    <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                 <div class="product">
+                  <img src="images/bittergaurd.webp" alt="Product 3">
+                    <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                <div class="product">
+                  <img src="images/ladiesfinger.jpg" alt="Product 3">
+                    <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                <div class="product">
+                    <img src="images/cabbage.png" alt="Product 5">
+                    <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                <div class="product">
+                    <img src="images/beans.webp" alt="Product 6">
+                    <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+            </div>
+  </div>
+  <div class="title">
+    <h5><i>Leaf-Vegetables</i></h5>
+</div>
+     <div class="main3">
+        <div class="scroll-container">
+            <div class="product">
+                <img src="images/Beet greens..png" alt="Product 1">
+                  <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;" class="button"  class="button">Contact</button>           
+                 </div>
+            <div class="product">
+                <img src="images/curry leaves .png" alt="Product 2">
+                  <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+            </div>
+            <div class="product">
+                <img src="images/Bok choy.jpg" alt="Product 3">
+                  <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+            </div>
+            <div class="product">
+                <img src="images/Endive.jpg" alt="Product 3">
+                  <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+            </div>
+            <div class="product">
+                <img src="images/gongura.png" alt="Product 3">
+                  <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+            </div>
+            <div class="product">
+                <img src="images/radish-micro-greens.jpg" alt="Product 3">
+                  <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+            </div>
+             <div class="product">
+                <img src="images/Spinach.jpg" alt="Product 3">
+                  <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+            </div>
+             <div class="product">
+                <img src="images/Swiss_Chard[1].webp" alt="Product 3">
+                  <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+            </div>
+             <div class="product">
+                <img src="images/Turnip_Greens[1].webp" alt="Product 3">
+                  <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+            </div>
+            <div class="product">
+                <img src="images/kotimera.webp" alt="Product 4">
+                  <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+            </div>
+        </div>
+     </div>
+     <div class="title">
+        <h5><i>Fruits</i></h5>
+    </div>
+         <div class="main3">
+            <div class="scroll-container">
+                <div class="product">
+                    <img src="images/apples.png" alt="Product 1">
+                      <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>               
+                 </div>
+                <div class="product">
+                    <img src="images/cherry.png" alt="Product 2">
+                      <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                <div class="product">
+                    <img src="images/corn.png" alt="Product 3">
+                      <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                <div class="product">
+                    <img src="images/greenapple.png" alt="Product 3">
+                      <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                <div class="product">
+                    <img src="images/kiwi.png" alt="Product 3">
+                      <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                <div class="product">
+                    <img src="images/orange .png" alt="Product 3">
+                      <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                 <div class="product">
+                    <img src="images/pineapple.png" alt="Product 3">
+                      <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                 <div class="product">
+                    <img src="images/pomegranate .png" alt="Product 3">
+                      <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                 <div class="product">
+                    <img src="images/strawberry .png" alt="Product 3">
+                      <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                <div class="product">
+                    <img src="images/watermelon .png" alt="Product 4">
+                      <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                <div class="product">
+                    <img src="images/mango.jpeg.jpg" alt="Product 5">
+                      <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+                <div class="product">
+                    <img src="images/banana.jpg" alt="Product 6">
+                      <span >Amul Masti Curd 400g</span>
+                    
+                    <span style="margin: 11%;">₹90/-</span>
+                
+                    <button style="margin: 11%;" class="add-button">Add</button>
+                    <button style="margin: 10%;"  class="button">Contact</button>
+                </div>
+            </div>
+         </div>
+         <div class="title">
+          <h5><i>Dairy Products</i></h5>
+      </div>
+           <div class="main3">
+              <div class="scroll-container">
+                  <div class="product">
+                      <img src="images/curd.png" alt="Product 1">
+                        <span >Amul Masti Curd 400g</span>
+                      
+                      <span style="margin: 11%;">₹90/-</span>
+                  
+                      <button style="margin: 11%;" class="add-button">Add</button>
+                      <button style="margin: 10%;"  class="button">Contact</button>               
+                   </div>
+                  <div class="product">
+                      <img src="images/panner.png" alt="Product 2">
+                        <span >Amul Masti Curd 400g</span>
+                      
+                      <span style="margin: 11%;">₹90/-</span>
+                  
+                      <button style="margin: 11%;" class="add-button">Add</button>
+                      <button style="margin: 10%;"  class="button">Contact</button>
+                  </div>
+                  <div class="product">
+                      <img src="images/ghee.png" alt="Product 3">
+                        <span >Amul Masti Curd 400g</span>
+                      
+                      <span style="margin: 11%;">₹90/-</span>
+                  
+                      <button style="margin: 11%;" class="add-button">Add</button>
+                      <button style="margin: 10%;"  class="button">Contact</button>
+                  </div>
+                  <div class="product">
+                      <img src="images/milk.png" alt="Product 3">
+                        <span >Amul Masti Curd 400g</span>
+                      
+                      <span style="margin: 11%;">₹90/-</span>
+                  
+                      <button style="margin: 11%;" class="add-button">Add</button>
+                      <button style="margin: 10%;"  class="button">Contact</button>
+                  </div>
+                  <div class="product">
+                      <img src="images/butter.png" alt="Product 3">
+                        <span >Amul Masti Curd 400g</span>
+                      
+                      <span style="margin: 11%;">₹90/-</span>
+                  
+                      <button style="margin: 11%;" class="add-button">Add</button>
+                      <button style="margin: 10%;"  class="button">Contact</button>
+                  </div>
+                  <div class="product">
+                      <img src="images/cheese[1].webp" alt="Product 3">
+                        <span >Amul Masti Curd 400g</span>
+                      
+                      <span style="margin: 11%;">₹90/-</span>
+                  
+                      <button style="margin: 11%;" class="add-button">Add</button>
+                      <button style="margin: 10%;"  class="button">Contact</button>
+                  </div>
+                   <div class="product">
+                      <img src="images/Kefir[1].jpg" alt="Product 3">
+                        <span >Amul Masti Curd 400g</span>
+                      
+                      <span style="margin: 11%;">₹90/-</span>
+                  
+                      <button style="margin: 11%;" class="add-button">Add</button>
+                      <button style="margin: 10%;"  class="button">Contact</button>
+                  </div> 
+              </div>
+           </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-section">
+            <h5>Useful-Links</h5>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Lead</a></li>
+              <li><a href="#">Value</a></li>
+            </ul>
+          </div>
+          <div class="footer-container">
+            <div class="footer-section">
+              <h5>Group Companies</h5>
+              <ul>
+                <li><a href="#">myntra</a></li>
+                <li><a href="#">cleartrip</a></li>
+                <li><a href="#">shopsy</a></li>
+              </ul>
+            </div>
+            <div class="footer-container">
+                <div class="footer-section">
+                  <h5>Help</h5>
+                  <ul style="margin-left:-30px;">
+                    <li><a href="#">payments</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">FAQ</a></li>
+                  </ul>
+                </div>
+          <div class="footer-section">
+            <h5 style="margin-left: 5px;">Categories</h5>
+            <ul>
+              <li><a href="#">See All</a></li>
+              <li><a href="#">Vegetables</a></li>
+              <li><a href="#">Fruits</a></li>
+              <li><a href="#">Dairy</a></li>
+              </ul>
+          </div>
+    
+          <div class="footer-section">
+            <h5 style="margin-left: 10px;">Resources</h5>
+            <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Partner</a></li>
+              <li><a href="#">Franchise</a></li>
+              <li><a href="#">Seller</a></li>
+              <li><a href="#">Warehouse</a></li>
+              <li><a href="#">Deliver</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+<script src="js/script.js"></script>
+ 
+</body>
+</html>

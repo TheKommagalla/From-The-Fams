@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Seller</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-9aOkG9QlW0S7CW/iv2dRvVn4BfGbfDyxle3hx8YGIZM6V5VfQ8XQ4VnGKK4wTVw4" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/become_a_seller.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Become a Seller</h2>
+        <div class="error-message" id="seller-error"></div>
+
+        <!-- Seller Form -->
+        <input type="text" id="store-name" placeholder="Store Name">
+        <input type="email" id="email" placeholder="Email Address">
+        <input type="number" id="phone-number" placeholder="Phone Number">
+        <input type="text" id="address" placeholder="Store Address">
+        <textarea id="description" rows="4" placeholder="Describe your store"></textarea>
+
+        <select id="category">
+            <option value="">Select Category</option>
+            <option value="vegetables">Vegetables</option>
+            <option value="fruits">Fruits</option>
+            <option value="groceries">Groceries</option>
+            <option value="dairy">Dairy Products</option>
+        </select>
+
+        <button onclick="submitSeller()">Submit</button>
+    </div>
+    <script src="js/become_a_seller.js"></script>
+</body>
+</html>

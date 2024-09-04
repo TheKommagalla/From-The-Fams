@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-9aOkG9QlW0S7CW/iv2dRvVn4BfGbfDyxle3hx8YGIZM6V5VfQ8XQ4VnGKK4wTVw4" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .contact-container {
+            display: flex;
+            width: 900px;
+            height: 600px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .left-side {
+            flex: 1;
+            background: url('https://via.placeholder.com/400x600') no-repeat center center/cover;
+        }
+        .right-side {
+            flex: 1.5;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .auto-typing-text {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .location, .contact {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .location i, .contact i {
+            margin-right: 10px;
+            color: #ff5722;
+        }
+        .whatsapp-icon {
+            color: #25d366;
+            margin-left: 10px;
+        }
+        .rating {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+        .stars {
+            color: gold;
+        }
+        .stars i {
+            margin-right: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e64a19;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+        .auto-typing-text span {
+            border-right: 2px solid black;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            width: 0;
+            animation: typing 3.5s steps(30, end), blink 0.75s step-end infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-container">
+        <!-- Left Side Image -->
+        <div class="left-side"></div>
+
+        <!-- Right Side Contact Details -->
+        <div class="right-side">
+            <div class="auto-typing-text">
+                <span id="auto-text"></span>
+            </div>
+            <div class="description">
+                Hi, I'm John Doe, a professional offering the best services in my field. I strive to provide top-notch customer satisfaction and quality.
+            </div>
+            
+            <!-- Location Info -->
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                1234 Elm Street, Springfield
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact">
+                <i class="fas fa-phone-alt"></i>
+                +123 456 7890
+                <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp whatsapp-icon"></i></a>
+            </div>
+
+            <!-- Star Rating -->
+            <div class="rating">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <span>4.0/5.0 rating</span>
+            </div>
+
+            <!-- Contact Button -->
+            <button>Contact Me</button>
+        </div>
+    </div>
+
+    <script>
+        // Auto typing text functionality
+        const autoText = document.getElementById('auto-text');
+        const phrases = ["Get in Touch", "How Can I Help?", "Contact Me Today!"];
+        let currentPhrase = 0;
+        let currentLetter = 0;
+
+        function type() {
+            if (currentLetter < phrases[currentPhrase].length) {
+                autoText.textContent += phrases[currentPhrase].charAt(currentLetter);
+                currentLetter++;
+                setTimeout(type, 150);  // Speed of typing
+            } else {
+                setTimeout(() => {
+                    autoText.textContent = '';
+                    currentLetter = 0;
+                    currentPhrase = (currentPhrase + 1) % phrases.length;
+                    type();
+                }, 2000);  // Delay before next phrase
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            type();
+        });
+    </script>
+</body>
+</html>
